@@ -16,6 +16,23 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+"""
+The tutorial project has just one app, polls. In real Django projects, there might be five,
+ten, twenty apps or more. How does Django differentiate the URL names between them? For
+example, the polls app has a detail view, and so might an app on the same project that is for
+a blog. How does one make it so that Django knows which app view to create for a url when
+using the {% url %} template tag?
+
+The answer is to add namespaces to your root URLconf.
+"""
 urlpatterns = [
+    url(r'^polls/', include("polls.urls", namespace="polls")),
     url(r'^admin/', include(admin.site.urls)),
 ]
+
+"""
+The idea behind include() is to make it easy to plug-and-play URLs.
+Since polls are in their own URLconf (polls/urls.py), they can be placed under
+“/polls/”, or under “/fun_polls/”, or under “/content/polls/”, or any other path root,
+and the app will still work.
+"""
