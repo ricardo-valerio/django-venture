@@ -1,4 +1,5 @@
-The first step in writing a database Web app in Django is to define your models – essentially, your database layout, with additional metadata.
+The first step in writing a database Web app in Django is to define your models
+– essentially, your database layout, with additional metadata.
 
 
 we’ll create two models: Question and Choice.
@@ -17,7 +18,8 @@ These concepts are represented by simple Python classes.
 # TUTORIAL PART 2
 #####################################
 
-First we’ll need to create a user who can login to the admin site. Run the following command:
+First we’ll need to create a user who can login to the admin site.
+Run the following command:
 
 ####################################################################
 # 	8- python3 manage.py createsuperuser
