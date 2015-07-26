@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %} Hello There {% endblock title %}
+
+{% block content %}
+	<h2>Welcome</h2>
+	<a href="{% url 'courses:index' %}">List of Courses</a>
+	{#
+	  caso não tivesse um nome associado chama-se:
+
+	  <a href="{% url "courses.views.course_list" %}">List of Courses</a>
+
+	#}
+{% endblock content %}

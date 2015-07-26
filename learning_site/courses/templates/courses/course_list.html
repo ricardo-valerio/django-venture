@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %} All Courses Here {% endblock title %}
+
+{% block content %}
+	<a href="{% url "home" %}">Home</a>
+	{#
+	  caso não tivesse um nome associado chama-se:
+
+	  <a href="{% url "views.home" %}">Home</a>
+
+	#}
+	<ul>
+		{% for course in courses %}
+			<li>{{ course.title }} - {{ course.description }} </li>
+		{% endfor %}
+	</ul>
+{% endblock content %}
+
+
