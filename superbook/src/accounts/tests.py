@@ -4,6 +4,7 @@ from .views import SignInAndSignUp
 
 
 class PageOpenTestCase(TestCase):
+
     def test_home_page_exists(self):
         url = reverse('home')
         r = self.client.get(url)
