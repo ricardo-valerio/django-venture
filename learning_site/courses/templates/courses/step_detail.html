@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+
+{% block title %} {{ step.title }} - {{ step.course.title }} {% endblock title %}
+
+{% block content %}
+    <article>
+        <h2>Course Title: {{ step.course.title }}</h2>
+        <h3>Step Title: {{ step.title }}</h3>
+        Step Description: {{ step.description }}
+        Step Content: {{ step.content|linebreaks }}
+    </article>
+{% endblock content %}

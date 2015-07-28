@@ -3,18 +3,17 @@
 {% block title %} All Courses Here {% endblock title %}
 
 {% block content %}
+
+	{# caso não tivesse o nome "home" associado chamava-se assim: #}
+	{# <a href="{% url "views.home" %}">Home</a> #}
 	<a href="{% url "home" %}">Home</a>
-	{#
-	  caso não tivesse um nome associado chama-se:
 
-	  <a href="{% url "views.home" %}">Home</a>
+	{% for course in courses %}
+		<a href="{% url "courses:course_detail" course.id %}"><h3>{{ course.title }}</h3></a>
+		<p>{{ course.description }}</p>
+		<hr>
+	{% endfor %}
 
-	#}
-	<ul>
-		{% for course in courses %}
-			<li>{{ course.title }} - {{ course.description }} </li>
-		{% endfor %}
-	</ul>
 {% endblock content %}
 
 
