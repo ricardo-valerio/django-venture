@@ -68,6 +68,7 @@ class CourseViewsTests(TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertIn(self.course, resp.context["courses"])
         self.assertIn(self.course2, resp.context["courses"])
+        self.assertTemplateUsed(resp, "courses/course_list.html")
 
     def test_course_detail_view(self):
         resp = self.client.get(reverse('courses:course_detail',
@@ -76,7 +77,7 @@ class CourseViewsTests(TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertEqual(self.course, resp.context['course'])
 
-    def test_step_detail(self):
+    def test_step_detail_view(self):
         resp = self.client.get(reverse('courses:step_detail',
                     kwargs={
                         'course_pk': self.course.pk,
