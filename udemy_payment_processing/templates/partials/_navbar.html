@@ -17,7 +17,9 @@
         <li {% if active_link == "about" %} class="active" {% endif %}>
             <a href="{% url "about" %}">About</a>
         </li>
-        {# <li><a href="#contact">Contact</a></li> #}
+        <li {% if active_link == "contact" %} class="active" {% endif %}>
+            <a href="{% url "contact:index" %}">Contact</a>
+        </li>
       </ul>
     </div>
   </div>

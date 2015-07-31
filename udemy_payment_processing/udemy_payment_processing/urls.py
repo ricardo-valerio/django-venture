@@ -19,7 +19,11 @@ from django.contrib import admin
 from profiles import views
 
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
+    url(r'^contact/?', include("contact.urls", namespace="contact")),
+
     url(r'^about/?$', views.about, name='about'),
+    url(r'^$', views.home, name='home'),
+
+
     url(r'^admin/', include(admin.site.urls)),
 ]

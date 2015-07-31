@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "profiles",
+    "contact",
 )
 
 MIDDLEWARE_CLASSES = (
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'udemy_payment_processing.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join("templates"), ],
+        'DIRS': ["templates", ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -107,3 +108,9 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'jricvalerio@gmail.com'
+EMAIL_HOST_PASSWORD = 'praiaportimao'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
