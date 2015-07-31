@@ -19,9 +19,11 @@ from django.contrib import admin
 from profiles import views
 
 urlpatterns = [
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^contact/?', include("contact.urls", namespace="contact")),
 
     url(r'^about/?$', views.about, name='about'),
+    url(r'^profile/?$', views.profile, name='profile'),
     url(r'^$', views.home, name='home'),
 
 
