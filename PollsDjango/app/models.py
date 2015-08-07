@@ -5,6 +5,7 @@ Definition of models.
 from django.db import models
 from django.db.models import Sum
 
+
 class Poll(models.Model):
     """A poll object for use in the application views and repository."""
     text = models.CharField(max_length=200)
@@ -17,6 +18,7 @@ class Poll(models.Model):
     def __str__(self):
         """Returns a string representation of a poll."""
         return self.text
+
 
 class Choice(models.Model):
     """A poll choice object for use in the application views and repository."""

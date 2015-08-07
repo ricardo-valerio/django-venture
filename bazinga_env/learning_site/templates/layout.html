@@ -1,0 +1,13 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock title %}</title>
+	<link rel="stylesheet" href="{% static "css/layout.css" %}">
+</head>
+<body>
+	<h1>Hello Django App!</h1>
+	{% block content %}{% endblock content %}
+</body>
+</html>
