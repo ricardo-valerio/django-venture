@@ -5,6 +5,7 @@ from . import views
 # namespacing urls specific to this app
 # so it can be used for example as:
 # {% url 'polls:detail' question.id %}
+# as seen in "polls/index.html" template
 app_name = 'polls'
 
 urlpatterns = [

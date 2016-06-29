@@ -9,11 +9,9 @@ class Question(models.Model):
     # We can use an optional first positional argument
     # to a Field to designate a human-readable name.
     pub_date = models.DateTimeField('date published')
-    # For all other fields in this model, the field’s
-    # machine-readable name will suffice as its human-readable name.
 
-    # It’s important to add __str__() methods to your models,
-    # not only for your own convenience when dealing with the interactive
+    # It’s important to add __str__() methods to our models,
+    # not only for our own convenience when dealing with the interactive
     # prompt, but also because objects’ representations are used throughout
     # Django’s automatically-generated admin.
     def __str__(self):

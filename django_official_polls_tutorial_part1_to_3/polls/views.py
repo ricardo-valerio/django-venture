@@ -5,16 +5,16 @@ from .models import Question
 
 
 def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
     return render(request, "polls/index.html", {
-        "latest_question_list": latest_question_list
+        "latest_question_list": Question.objects.order_by('-pub_date')[:5]
     })
 
 
 def detail(request, question_id):
     # There’s also a get_list_or_404() function
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/detail.html', {'question': question})
+    return render(request, 'polls/detail.html', {
+        'question': get_object_or_404(Question, pk=question_id)
+    })
 
 
 def results(request, question_id):

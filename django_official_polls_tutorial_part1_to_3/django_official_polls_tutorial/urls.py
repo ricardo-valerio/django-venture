@@ -19,5 +19,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # You should always use include() when you include other URL patterns.
+    #  admin.site.urls is the only exception to this.
     url(r'^polls/', include('polls.urls')),
 ]
