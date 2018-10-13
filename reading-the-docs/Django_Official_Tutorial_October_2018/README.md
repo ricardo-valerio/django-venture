@@ -1,4 +1,4 @@
-Django Version being used: 2.1.2
-To activate the virtualenv just type <source bin/activate>
-To install the requirements type: <pip3 install -r requirements.txt>
-To deactivate the virtualenv just type <deactivate>
+- Django Version being used: 2.1.2
+- To activate the virtualenv just type <source bin/activate>
+- To install the requirements type: <pip3 install -r requirements.txt>
+- To deactivate the virtualenv just type <deactivate>
