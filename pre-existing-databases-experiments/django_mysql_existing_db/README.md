@@ -6,16 +6,16 @@
 
 - edit settings.py with:
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'clinica',
-            'HOST': '/Applications/djangostack-1.9.7-0/mysql/tmp/mysql.sock',
-            'PORT': '3306',
-            'USER': 'root',
-            'PASSWORD': 'bazinga'
-        }
-    }
+            DATABASES = {
+                'default': {
+                    'ENGINE': 'django.db.backends.mysql',
+                    'NAME': 'clinica',
+                    'HOST': '/Applications/djangostack-1.9.7-0/mysql/tmp/mysql.sock',
+                    'PORT': '3306',
+                    'USER': 'root',
+                    'PASSWORD': 'bazinga'
+                }
+            }
 
 - add `bazingaApp` to INSTALLED_APPS:
 
