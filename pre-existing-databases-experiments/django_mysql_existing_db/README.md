@@ -31,6 +31,6 @@ add bazingaApp to INSTALLED_APPS:
 
 edit the file models.py and then:
 
-   /Applications/djangostack-1.9.7-0/python/bin/python2.7 manage.py shell
+    /Applications/djangostack-1.9.7-0/python/bin/python2.7 manage.py shell
 
 interact with the db and be happy
