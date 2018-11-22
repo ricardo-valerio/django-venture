@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Modelo de Dados Unificados{% endblock %}
+
+{% block content %}
+
+    <h1>Modelo de Dados Unificados</h1>
+
+
+    <div class="table-responsive">
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Incident Code</th>
+            <th>Open Date</th>
+            <th>Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for mdu in modelo_de_dados_unificados_list %}
+              <tr>
+                <td>
+                  <a href="{% url "incidentes:mdu_detail" mdu.id %}">
+                    {{ mdu.incident_code}}</a>
+                </td>
+                <td>{{ mdu.open_date }}</td>
+                <td>{{ mdu.impact }}</td>
+              </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+{% endblock %}

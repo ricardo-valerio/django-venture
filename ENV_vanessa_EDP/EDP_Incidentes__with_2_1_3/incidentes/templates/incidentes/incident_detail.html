@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Incident Detail{% endblock %}
+
+{% block content %}
+
+    <h1>Incident Detail</h1>
+
+    <table class="table table-striped table-sm">
+      <tbody>
+          <tr>
+            <th>Name</th>
+            <td>{{ incident.name }}</td>
+          </tr>
+          <tr>
+            <th>Display Id</th>
+            <td>{{ incident.display_id }}</td>
+          </tr>
+          <tr>
+            <th>Ticket Type</th>
+            <td>{{ incident.ticket_type }}</td>
+          </tr>
+          <tr>
+            <th>Stage</th>
+            <td>{{ incident.stage }}</td>
+          </tr>
+          <tr>
+            <th>Frequency</th>
+            <td>{{ incident.frequency }}</td>
+          </tr>
+          <tr>
+            <th>Operation Impact</th>
+            <td>{{ incident.operation_impact }}</td>
+          </tr>
+          <tr>
+            <th>Security Classification</th>
+            <td>{{ incident.security_classification }}</td>
+          </tr>
+          <tr>
+            <th>Consequence Severity</th>
+            <td>{{ incident.consequence_severity }}</td>
+          </tr>
+          <tr>
+            <th>Reporting Level</th>
+            <td>{{ incident.reporting_level }}</td>
+          </tr>
+          <tr>
+            <th>Folloup Contact</th>
+            <td>{{ incident.followup_contact }}</td>
+          </tr>
+          <tr>
+            <th>Create Time</th>
+            <td>{{ incident.create_time }}</td>
+          </tr>
+          <tr>
+            <th>Incident Closed</th>
+            <td>{{ incident.incident_closed }}</td>
+          </tr>
+          <tr>
+            <th>Creator</th>
+            <td>{{ incident.creator }}</td>
+          </tr>
+          <tr>
+            <th>Time of Resolution in Days</th>
+            <td>{{ incident.time_of_resolution_in_days }}</td>
+          </tr>
+          <tr>
+            <th>Open Month</th>
+            <td>{{ incident.open_month }}</td>
+          </tr>
+          <tr>
+            <th>Open Year</th>
+            <td>{{ incident.open_year }}</td>
+          </tr>
+          <tr>
+            <th>Closed Month</th>
+            <td>{{ incident.closed_month }}</td>
+          </tr>
+          <tr>
+            <th>Closed Year</th>
+            <td>{{ incident.closed_year }}</td>
+          </tr>
+          <tr>
+            <th>Open Month Create Time</th>
+            <td>{{ incident.open_month_create_time }}</td>
+          </tr>
+          <tr>
+            <th>Open Year Create Time</th>
+            <td>{{ incident.open_year_create_time }}</td>
+          </tr>
+          <tr>
+            <th>Malware Detected</th>
+            <td>{{ incident.malware_detected }}</td>
+          </tr>
+          <tr>
+            <th>Source of Logs</th>
+            <td>{{ incident.source_of_logs }}</td>
+          </tr>
+          <tr>
+            <th>Host Info</th>
+            <td>{{ incident.host_info }}</td>
+          </tr>
+          <tr>
+            <th>TimeStamp Arcsight</th>
+            <td>{{ incident.timestamp_arcsight }}</td>
+          </tr>
+
+       </tbody>
+    </table>
+
+{% endblock %}

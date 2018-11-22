@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}MDU Detail{% endblock %}
+
+{% block content %}
+
+    <h1>MDU Detail</h1>
+
+    <table class="table table-striped table-sm">
+      <tbody>
+          <tr>
+            <th>Incident Code</th>
+            <td>{{ mdu.incident_code }}</td>
+          </tr>
+          <tr>
+            <th>Asset/CI</th>
+            <td>{{ mdu.asset_ci }}</td>
+          </tr>
+          <tr>
+            <th>Security Classification</th>
+            <td>{{ mdu.security_classification }}</td>
+          </tr>
+          <tr>
+            <th>Info Security Typification</th>
+            <td>{{ mdu.info_security_typification }}</td>
+          </tr>
+          <tr>
+            <th>Afected User</th>
+            <td>{{ mdu.afected_user }}</td>
+          </tr>
+          <tr>
+            <th>Open Date</th>
+            <td>{{ mdu.open_date }}</td>
+          </tr>
+          <tr>
+            <th>Resolution Date</th>
+            <td>{{ mdu.resolution_date }}</td>
+          </tr>
+          <tr>
+            <th>State</th>
+            <td>{{ mdu.state }}</td>
+          </tr>
+          <tr>
+            <th>Impact</th>
+            <td>{{ mdu.impact }}</td>
+          </tr>
+       </tbody>
+    </table>
+
+{% endblock %}

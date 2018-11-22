@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Incidentes{% endblock %}
+
+{% block content %}
+
+  <h1>Incidentes</h1>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Reporting Level</th>
+          <th>create time</th>
+          <th>Consequence Severity</th>
+        </tr>
+      </thead>
+      <tbody>
+    {% for incidente in incidentes_list %}
+        <tr>
+          <td>
+            <a href="{% url "incidentes:incident_detail" incidente.id %}">
+              {{ incidente.name}}</a>
+          </td>
+          <td>{{ incidente.reporting_level }}</td>
+          <td>{{ incidente.create_time }}</td>
+          <td>{{ incidente.consequence_severity }}</td>
+        </tr>
+    {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{% endblock %}
